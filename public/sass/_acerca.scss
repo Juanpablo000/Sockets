@@ -1,0 +1,32 @@
+$color:aqua;
+#Acercade{
+    background: $color;
+}
+
+.info-container {
+	height: 100%;
+	background: #fff;
+	overflow: hidden;
+}
+
+.info-header {
+	background: var(--dark-color-a);
+	color: #fff;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.info-main{
+	text-align: justify;
+	padding-top: 35px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.info-main p{
+	padding-bottom: 20px;
+}

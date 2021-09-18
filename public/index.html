@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+			integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="css/main.min.css" />
+		<title>ChatGrupal</title>
+	</head>
+
+	<body>
+		<!-- Sección inicial -->
+		<section class="ocultar" id="Inicio">
+		<div class="join-container">
+			<header class="join-header">
+				<h1><i class="fas fa-smile"></i> ChatGrupal</h1>
+			</header>
+			<main class="join-main">
+				<form>
+					<div class="form-control">
+						<label for="username">Usuario</label>
+						<input
+							type="text"
+							name="username"
+							id="username"
+							placeholder="Usuario..."
+							required
+						/>
+					</div>
+					<div class="form-control">
+						<label for="room">Sala</label>
+						<select name="room" id="room">
+							<option value="JavaScript">JavaScript</option>
+							<option value="Python">Python</option>
+							<option value="PHP">PHP</option>
+							<option value="C#">C#</option>
+							<option value="Ruby">Ruby</option>
+							<option value="Java">Java</option>
+						</select>
+					</div>
+					<button type="submit" class="btn">Unirse</button>
+					</form>
+					<br>
+				
+					<button type="submit"  onclick="irA(2)" class="btn">Acerca de</button>
+			</main>
+		</div>
+		</section>
+	
+		<!-- Sección del chat -->
+		<section class="ocultar" id="ChatUsuario">
+		<div class="chat-container">
+			<header class="chat-header">
+			  <h1><i class="fas fa-smile"></i> Chat grupal</h1>
+			  <a id="leave-btn" onclick="irA(0)" class="btn">Dejar sala</a>
+			</header>
+			<main class="chat-main">
+			  <div class="chat-sidebar">
+				<h3><i class="fas fa-comments"></i> Salas:</h3>
+				<h2 id="room-name"></h2>
+				<h3><i class="fas fa-users"></i> Usuarios</h3>
+				<ul id="users"></ul>
+			  </div>
+			  <div class="chat-messages"></div>
+			</main>
+			<div class="message"></div>
+			<div class="chat-form-container">
+			  <form id="chat-form">
+				<input
+				  id="msg"
+				  type="text"
+				  placeholder="Ingrese un mensaje..."
+				  required
+				  autocomplete="off"
+				/>
+				<button class="btn"><i class="fas fa-paper-plane"></i> Enviar</button>
+			  </form>
+			</div>
+		  </div>
+		</section>
+
+		<!-- Sección de acerca de -->
+		<section class="ocultar" id="Acercade">
+		<div class="info-container">
+			<header class="info-header">
+				<h1><i class="fas fa-smile"></i> Acerca de</h1>
+				<a id="leave-btn" onclick="irA(0)" class="btn">Volver</a>
+			</header>
+			<main class="info-main">
+				<p>
+					La aplicación consiste en un chat grupal que hace uso de sokects pra establecer la comunicación, el proyecto esta basado en el proyecto creado por Traversy Media
+				</p>
+				
+				<p>
+					Reacondicionado por: Juan Pablo Grisales
+				</p>
+				<a href="https://www.youtube.com/watch?v=jD7FnbI76Hg">Enlace del código original</a>
+			</main>
+		</div>
+		</section>
+
+		  <script
+		  src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+		  integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+		  crossorigin="anonymous"></script>
+		  <script src="/socket.io/socket.io.js"></script>
+		  <script src="js/main.js"></script>
+
+	</body>
+</html>
